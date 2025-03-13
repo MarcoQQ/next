@@ -1,5 +1,5 @@
 function a() {
-  return <div>a</div>;
+  return <div>abcdef</div>;
 }
 
 export default a;
