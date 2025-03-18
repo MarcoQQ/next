@@ -18,7 +18,8 @@ export default async function Product() {
 }
 
 async function getProducts() {
-  const res = await fetch(`http://localhost:3000/api/product`, { cache: 'no-store' });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const res = await fetch(`${baseUrl}/api/product`, { cache: 'no-store' });
   const data = await res.json();
 
   return data.products as any[];
